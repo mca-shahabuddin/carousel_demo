@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerViewCell" id="P6B-Jl-sGZ" customClass="BannerViewCell" customModule="CarouselDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PfQ-15-wIf">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9o-vU-jxt">
+                        <rect key="frame" x="10" y="10" width="380" height="170"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oT4-Ch-X7l">
+                                <rect key="frame" x="0.0" y="0.0" width="380" height="170"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oT4-Ch-X7l" firstAttribute="leading" secondItem="X9o-vU-jxt" secondAttribute="leading" id="RKS-IS-uGu"/>
+                            <constraint firstAttribute="bottom" secondItem="oT4-Ch-X7l" secondAttribute="bottom" id="azV-yB-N1h"/>
+                            <constraint firstItem="oT4-Ch-X7l" firstAttribute="top" secondItem="X9o-vU-jxt" secondAttribute="top" id="kml-rm-1pB"/>
+                            <constraint firstAttribute="trailing" secondItem="oT4-Ch-X7l" secondAttribute="trailing" id="mR6-rK-7Zs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="X9o-vU-jxt" firstAttribute="leading" secondItem="PfQ-15-wIf" secondAttribute="leading" constant="10" id="bI1-6o-esL"/>
+                    <constraint firstItem="X9o-vU-jxt" firstAttribute="top" secondItem="PfQ-15-wIf" secondAttribute="top" constant="10" id="f3n-Yc-iDg"/>
+                    <constraint firstAttribute="bottom" secondItem="X9o-vU-jxt" secondAttribute="bottom" id="pox-E4-I9B"/>
+                    <constraint firstAttribute="trailing" secondItem="X9o-vU-jxt" secondAttribute="trailing" constant="10" id="x0H-5U-yVU"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="imageViewBanner" destination="oT4-Ch-X7l" id="Evj-gJ-tIW"/>
+                <outlet property="viewMain" destination="X9o-vU-jxt" id="UZ3-HW-ss4"/>
+            </connections>
+            <point key="canvasLocation" x="134" y="54"/>
+        </collectionViewCell>
+    </objects>
+</document>

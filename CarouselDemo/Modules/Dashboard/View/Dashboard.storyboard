@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Carousel ListVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CarouselListVC" id="Y6W-OH-hqX" customClass="CarouselListVC" customModule="CarouselDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6q1-9u-ok4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="H9i-eT-jgw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GG7-g0-m8I">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="NAp-D3-lyY">
+                                                <size key="itemSize" width="128" height="170"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <connections>
+                                                <outlet property="dataSource" destination="Y6W-OH-hqX" id="UGS-fc-vNR"/>
+                                                <outlet property="delegate" destination="Y6W-OH-hqX" id="yfD-Qr-UCU"/>
+                                            </connections>
+                                        </collectionView>
+                                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="z3R-eN-Rg5">
+                                            <rect key="frame" x="149" y="144" width="116" height="26"/>
+                                        </pageControl>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="z3R-eN-Rg5" secondAttribute="bottom" id="9PO-98-dWo"/>
+                                        <constraint firstItem="z3R-eN-Rg5" firstAttribute="top" secondItem="GG7-g0-m8I" secondAttribute="bottom" id="AC6-zc-7dC"/>
+                                        <constraint firstItem="GG7-g0-m8I" firstAttribute="top" secondItem="H9i-eT-jgw" secondAttribute="top" id="LEz-Uk-i0b"/>
+                                        <constraint firstAttribute="height" constant="170" id="OSv-16-kUs"/>
+                                        <constraint firstItem="z3R-eN-Rg5" firstAttribute="centerX" secondItem="H9i-eT-jgw" secondAttribute="centerX" id="rzZ-MO-MDA"/>
+                                        <constraint firstAttribute="trailing" secondItem="GG7-g0-m8I" secondAttribute="trailing" id="sWG-9H-tan"/>
+                                        <constraint firstItem="GG7-g0-m8I" firstAttribute="leading" secondItem="H9i-eT-jgw" secondAttribute="leading" id="w1b-Qx-1nY"/>
+                                    </constraints>
+                                </view>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="3s3-56-uBM"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Uag-rt-iO6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6q1-9u-ok4" secondAttribute="trailing" id="TqK-ey-NgE"/>
+                            <constraint firstItem="6q1-9u-ok4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="V2N-Pc-aKu"/>
+                            <constraint firstItem="6q1-9u-ok4" firstAttribute="bottom" secondItem="5EZ-qb-Rvc" secondAttribute="bottom" id="hbZ-s0-o9A"/>
+                            <constraint firstItem="6q1-9u-ok4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="kWe-Ua-bxF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="CVCarousel" destination="GG7-g0-m8I" id="c2n-JJ-Oyf"/>
+                        <outlet property="TBLProductList" destination="6q1-9u-ok4" id="bVq-9G-Lyd"/>
+                        <outlet property="carouselPageControl" destination="z3R-eN-Rg5" id="7wh-kh-jOX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
